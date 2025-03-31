@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Must be kept in sync with AspectRatioFrameLayout -->
+    <attr name="resize_mode" format="enum">
+        <enum name="fit" value="0"/>
+        <enum name="fixed_width" value="1"/>
+        <enum name="fixed_height" value="2"/>
+        <enum name="fill" value="3"/>
+        <enum name="zoom" value="4"/>
+    </attr>
+
+    <!-- Must be kept in sync with SimpleExoPlayerView -->
+    <attr name="surface_type" format="enum">
+        <enum name="none" value="0"/>
+        <enum name="surface_view" value="1"/>
+        <enum name="texture_view" value="2"/>
+    </attr>
+    <attr name="show_timeout" format="integer"/>
+    <attr name="rewind_increment" format="integer"/>
+    <attr name="fastforward_increment" format="integer"/>
+    <attr name="player_layout_id" format="reference"/>
+    <attr name="controller_layout_id" format="reference"/>
+    <attr name="repeat_toggle_modes">
+        <flag name="none" value="0"/>
+        <flag name="one" value="1"/>
+        <flag name="all" value="2"/>
+    </attr>
+    <attr name="show_shuffle_button" format="boolean"/>
+
+    <declare-styleable name="PlayerView">
+        <attr name="use_artwork" format="boolean"/>
+        <attr name="shutter_background_color" format="color"/>
+        <attr name="default_artwork" format="reference"/>
+        <attr name="use_controller" format="boolean"/>
+        <attr name="hide_on_touch" format="boolean"/>
+        <attr name="hide_during_ads" format="boolean"/>
+        <attr name="auto_show" format="boolean"/>
+        <attr name="show_buffering" format="boolean"/>
+        <attr name="keep_content_on_player_reset" format="boolean"/>
+        <attr name="resize_mode"/>
+        <attr name="surface_type"/>
+        <attr name="player_layout_id"/>
+        <!-- PlayerControlView attributes -->
+        <attr name="show_timeout"/>
+        <attr name="rewind_increment"/>
+        <attr name="fastforward_increment"/>
+        <attr name="repeat_toggle_modes"/>
+        <attr name="show_shuffle_button"/>
+        <attr name="controller_layout_id"/>
+    </declare-styleable>
+
+    <declare-styleable name="AspectRatioFrameLayout">
+        <attr name="resize_mode"/>
+    </declare-styleable>
+
+    <declare-styleable name="PlayerControlView">
+        <attr name="show_timeout"/>
+        <attr name="rewind_increment"/>
+        <attr name="fastforward_increment"/>
+        <attr name="repeat_toggle_modes"/>
+        <attr name="show_shuffle_button"/>
+        <attr name="controller_layout_id"/>
+    </declare-styleable>
+
+    <declare-styleable name="DefaultTimeBar">
+        <attr name="bar_height" format="dimension"/>
+        <attr name="touch_target_height" format="dimension"/>
+        <attr name="ad_marker_width" format="dimension"/>
+        <attr name="scrubber_enabled_size" format="dimension"/>
+        <attr name="scrubber_disabled_size" format="dimension"/>
+        <attr name="scrubber_dragged_size" format="dimension"/>
+        <attr name="scrubber_drawable" format="reference"/>
+        <attr name="played_color" format="color"/>
+        <attr name="scrubber_color" format="color"/>
+        <attr name="buffered_color" format="color"/>
+        <attr name="unplayed_color" format="color"/>
+        <attr name="ad_marker_color" format="color"/>
+        <attr name="played_ad_marker_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="LabelView">
+        <attr name="label_distance" format="dimension" />
+        <attr name="label_height" format="dimension"/>
+        <attr name="label_strokeWidth" format="dimension"/>
+        <attr name="label_backgroundColor" format="color"/>
+        <attr name="label_strokeColor" format="color"/>
+        <attr name="label_text" format="string"/>
+        <attr name="label_textSize" format="dimension" />
+        <attr name="label_textStyle" format="enum" >
+            <enum name="NORMAL" value="0"/>
+            <enum name="BOLD" value="1"/>
+            <enum name="ITALIC" value="2"/>
+            <enum name="BOLD_ITALIC" value="3"/>
+        </attr>
+        <attr name="label_textColor" format="color"/>
+        <attr name="label_visual" format="boolean"/>
+        <attr name="label_orientation" format="enum">
+            <enum name="LEFT_TOP" value="1"/>
+            <enum name="RIGHT_TOP" value="2"/>
+            <enum name="LEFT_BOTTOM" value="3"/>
+            <enum name="RIGHT_BOTTOM" value="4"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="AVLoadingIndicatorView">
+        <attr name="minWidth" format="dimension" />
+        <attr name="maxWidth" format="dimension"/>
+        <attr name="minHeight" format="dimension" />
+        <attr name="maxHeight" format="dimension"/>
+        <attr name="indicatorName" format="string"/>
+        <attr name="indicatorColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="RippleBackground">
+        <attr name="rb_color" format="color" />
+        <attr name="rb_strokeWidth" format="dimension" />
+        <attr name="rb_radius" format="dimension" />
+        <attr name="rb_duration" format="integer" />
+        <attr name="rb_rippleAmount" format="integer" />
+        <attr name="rb_scale" format="float" />
+        <attr name="rb_type" format="enum">
+            <enum name="fillRipple" value="0" />
+            <enum name="strokeRipple" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="IconView">
+        <attr name="laName" format="string" />
+        <attr name="laSize" format="integer" />
+        <attr name="laType" format="string" />
+    </declare-styleable>
+
+    <attr name="siArrowPosition">
+        <enum name="left" value="0" />
+        <enum name="right" value="1" />
+    </attr>
+    <attr name="siBorderType">
+        <enum name="stroke" value="0" />
+        <enum name="fill" value="1" />
+    </attr>
+    <attr name="siStrokeCap">
+        <enum name="butt" value="0" />
+        <enum name="round" value="1" />
+        <enum name="square" value="2" />
+    </attr>
+    <attr name="siStrokeJoin">
+        <enum name="bevel" value="0" />
+        <enum name="miter" value="1" />
+        <enum name="round" value="2" />
+    </attr>
+    <declare-styleable name="ShaderImageView">
+        <attr name="siSquare" format="boolean" />
+        <attr name="siBorderColor" format="color" />
+        <attr name="siBorderWidth" format="dimension" />
+        <attr name="siBorderAlpha" format="float" />
+        <attr name="siForeground" format="integer|reference" />
+        <!-- Rounded Image View -->
+        <attr name="siRadius" format="dimension" />
+        <!--BubbleImageView-->
+        <attr name="siArrowPosition" />
+        <attr name="siTriangleHeight" format="dimension" />
+        <!--PorterImageView-->
+        <attr name="siShape" format="integer|reference" />
+        <!--ShaderImageView-->
+        <attr name="siBorderType" />
+        <attr name="siStrokeCap" />
+        <attr name="siStrokeJoin" />
+        <attr name="siStrokeMiter" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="SliderLayout">
+
+        <!-- indicator visibility -->
+        <attr name="indicator_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+
+        <attr name="auto_cycle" format="boolean" />
+
+        <!-- page animation -->
+        <attr name="pager_animation" format="enum">
+            <enum name="Default" value="0">Default</enum>
+            <enum name="Accordion" value="1">Accordion</enum>
+            <enum name="Background2Foreground" value="2">Background2Foreground</enum>
+            <enum name="CubeIn" value="3">CubeIn</enum>
+            <enum name="DepthPage" value="4">DepthPage</enum>
+            <enum name="Fade" value="5">Fade</enum>
+            <enum name="FlipHorizontal" value="6">FlipHorizontal</enum>
+            <enum name="FlipPage" value="7">FlipPage</enum>
+            <enum name="Foreground2Background" value="8">Foreground2Background</enum>
+            <enum name="RotateDown" value="9">RotateDown</enum>
+            <enum name="RotateUp" value="10">RotateUp</enum>
+            <enum name="Stack" value="11">Stack</enum>
+            <enum name="Tablet" value="12">Tablet</enum>
+            <enum name="ZoomIn" value="13">ZoomIn</enum>
+            <enum name="ZoomOutSlide" value="14">ZoomOutSlide</enum>
+            <enum name="ZoomOut" value="15">ZoomOut</enum>
+        </attr>
+
+        <!-- page animation time span -->
+        <attr name="pager_animation_span" format="integer" />
+
+    </declare-styleable>
+
+    <declare-styleable name="PagerIndicator">
+        <!-- indicator visibility -->
+        <attr name="visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+
+        <attr name="shape" format="enum">
+            <enum name="oval" value="0" />
+            <enum name="rect" value="1" />
+        </attr>
+
+        <attr name="selected_color" format="color" />
+        <attr name="unselected_color" format="color" />
+
+        <!-- indicator style -->
+        <attr name="selected_drawable" format="reference" />
+        <attr name="unselected_drawable" format="reference" />
+
+        <attr name="selected_width" format="dimension" />
+        <attr name="selected_height" format="dimension" />
+
+        <attr name="unselected_width" format="dimension" />
+        <attr name="unselected_height" format="dimension" />
+
+        <attr name="padding_left" format="dimension" />
+        <attr name="padding_right" format="dimension" />
+        <attr name="padding_top" format="dimension" />
+        <attr name="padding_bottom" format="dimension" />
+
+        <attr name="selected_padding_left" format="dimension" />
+        <attr name="selected_padding_right" format="dimension" />
+        <attr name="selected_padding_top" format="dimension" />
+        <attr name="selected_padding_bottom" format="dimension" />
+
+        <attr name="unselected_padding_left" format="dimension" />
+        <attr name="unselected_padding_right" format="dimension" />
+        <attr name="unselected_padding_top" format="dimension" />
+        <attr name="unselected_padding_bottom" format="dimension" />
+
+
+    </declare-styleable>
+
+    <declare-styleable name="Themes">
+        <attr name="SliderStyle" format="reference" />
+        <attr name="PagerIndicatorStyle" format="reference" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="FloatingActionButton">
+        <attr name="fab_colorPressed" format="color"/>
+        <attr name="fab_colorDisabled" format="color"/>
+        <attr name="fab_colorNormal" format="color"/>
+        <attr name="fab_icon" format="reference"/>
+        <attr name="fab_size" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="mini" value="1"/>
+        </attr>
+        <attr name="fab_title" format="string"/>
+        <attr name="fab_stroke_visible" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="AddFloatingActionButton">
+        <attr name="fab_plusIconColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="FloatingActionsMenu">
+        <attr name="fab_addButtonColorPressed" format="color"/>
+        <attr name="fab_addButtonColorNormal" format="color"/>
+        <attr name="fab_addButtonSize" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="mini" value="1"/>
+        </attr>
+        <attr name="fab_addButtonPlusIconColor" format="color"/>
+        <attr name="fab_addButtonStrokeVisible" format="boolean"/>
+        <attr name="fab_labelStyle" format="reference"/>
+        <attr name="fab_labelsPosition" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+        <attr name="fab_expandDirection" format="enum">
+            <enum name="up" value="0"/>
+            <enum name="down" value="1"/>
+            <enum name="left" value="2"/>
+            <enum name="right" value="3"/>
+        </attr>
+    </declare-styleable>
+</resources>
